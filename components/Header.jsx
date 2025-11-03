@@ -5,14 +5,13 @@ import Link from 'next/link';
 
 export function Header({ left = null, center = null, right = null }) {
   const [activeTab, setActiveTab] = useState('forYou');
-  const forYouClass =
-    activeTab === 'forYou'
-      ? 'font-bold text-black border-b-2 border-blue-500'
-      : 'font-normal text-gray-500 border-b-2 border-transparent';
-  const followingClass =
-    activeTab === 'following'
-      ? 'font-bold text-black border-b-2 border-blue-500'
-      : 'font-normal text-gray-500 border-b-2 border-transparent';
+
+  const getTabClass = (tab) =>
+    `px-2 pb-1 border-b-2 ${
+      activeTab === tab
+        ? 'font-bold text-black border-blue-500'
+        : 'font-normal text-gray-500 border-transparent'
+    }`;
 
   return (
     <header>
@@ -24,11 +23,14 @@ export function Header({ left = null, center = null, right = null }) {
 
       <nav className="pt-4">
         <ul className="flex items-center justify-center gap-22">
-          <li className={forYouClass} onClick={() => setActiveTab('forYou')}>
+          <li
+            className={getTabClass('forYou')}
+            onClick={() => setActiveTab('forYou')}
+          >
             <Link href="/tweet">For you</Link>
           </li>
           <li
-            className={followingClass}
+            className={getTabClass('following')}
             onClick={() => setActiveTab('following')}
           >
             <Link href="/tweet">Following</Link>
