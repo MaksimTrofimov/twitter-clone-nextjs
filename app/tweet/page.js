@@ -2,6 +2,7 @@ import { Header } from '@/components/Header';
 import { MainHeader } from '@/components/MainHeader';
 import { getTweets } from '@/services/tweetService';
 import { TweetCard } from '@/components/TweetCard';
+import { NavTweet } from '@/components/NavTweet';
 
 export default async function Tweets() {
   const { headerLeft, headerCenter } = MainHeader();
@@ -9,7 +10,7 @@ export default async function Tweets() {
 
   return (
     <>
-      <Header left={headerLeft} center={headerCenter} />
+      <Header left={headerLeft} center={headerCenter} NavComponent={NavTweet} />
       <section className="flex flex-col items-center">
         {tweets.map((tweet) => (
           <TweetCard key={tweet.id} tweet={tweet} />
