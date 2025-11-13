@@ -3,7 +3,7 @@ import { MainHeader } from '@/components/MainHeader';
 import { getTweets } from '@/services/tweetService';
 import { TweetCard } from '@/components/TweetCard';
 
-export default async function Home() {
+export default async function Tweets() {
   const { headerLeft, headerCenter } = MainHeader();
   const tweets = await getTweets();
 
