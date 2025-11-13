@@ -1,5 +1,4 @@
 export function getInitials(name = 'noname') {
-  if (!name) return '';
   return name
     .split(' ')
     .map((n) => n[0].toUpperCase())
