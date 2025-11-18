@@ -1,14 +1,8 @@
 import { Logo } from '@/components/Logo';
-import { Avatar } from '@/components/Avatar';
 
+import { NavMenu } from '@/components/NavMenu';
 export function MainHeader() {
-  const headerLeft = (
-    <button>
-      <Avatar size="30" />
-    </button>
-  );
-
+  const headerLeft = <NavMenu />;
   const headerCenter = <Logo />;
-
   return { headerLeft, headerCenter };
 }
