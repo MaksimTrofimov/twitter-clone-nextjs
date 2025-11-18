@@ -1,0 +1,33 @@
+# Node modules should NOT be copied into image
+node_modules
+
+# Next.js build folder
+.next
+dist
+
+# Env files should NOT go inside image
+.env
+.env.*
+!env.template  # optional template for the team
+
+# Git
+.git
+.gitignore
+
+# Logs
+npm-debug.log
+yarn-error.log
+*.log
+
+# Docker files
+docker-compose.yml
+Dockerfile
+
+# Tests & coverage
+coverage
+__tests__
+
+# OS / Editor garbage
+.DS_Store
+*.swp
+*.swo
