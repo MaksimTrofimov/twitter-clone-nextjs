@@ -41,6 +41,10 @@ const userSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
+    dateOfBirth: {
+      type: Date,
+      required: true,
+    },
   },
   {
     timestamps: true,
