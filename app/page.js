@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { Register } from '@/components/auth/Register';
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
               Sign up with Apple
             </Link>
             <span className="mt-2 uppercase">or</span>
+            <Register />
             <Link
               href="/tweet"
               className="mt-2 w-full rounded-2xl border-2 border-gray-500 bg-black p-2 text-center font-semibold text-white hover:bg-gray-700"
